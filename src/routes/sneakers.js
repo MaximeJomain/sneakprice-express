@@ -7,4 +7,8 @@ router.get("/", (req, res) => {
   sneakersController.handler(req, res);
 });
 
+router.get("/getHistoryById/:id", (req, res) => {
+  sneakersController.getHistoryById(req, res);
+});
+
 module.exports = router;

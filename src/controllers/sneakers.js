@@ -128,31 +128,25 @@ async function fetchSneakersSales(db) {
   }
 }
 
-/* exports.getHistoryById = function (req, res) {
-    const shoeId = req.params.id
-    const array1 = {
-        "idSize": "4d9f6441-f20c-4906-89e1-b0c4f48fe92f",
-        "03/23": "151",
-        "03/23": "145",
-        "03/23": "171",
-        "03/23": "225",
-        "04/23": "225",
-        "04/23": "225",
-        "04/23": "201",
-        "04/23": "180",
-        "04/23": "170",
-        "04/23": "181",
-        "04/23": "164",
-        "04/23": "164",
-        "05/23": "173",
-        "05/23": "172",
-    }
+exports.getHistoryById = function (req, res) {
+  const shoeId = req.params.id;
+  const array1 = {
+    idSize: "4d9f6441-f20c-4906-89e1-b0c4f48fe92f",
+    "7 mars": "151",
+    "14 mars": "145",
+    "21 mars": "171",
+    "28 mars": "225",
+    "4 avril": "225",
+    "11 avril": "225",
+    "18 avril": "201",
+    "25 avril": "180",
+    "2 mai": "170",
+    "9 mai": "181",
+  };
 
-    const arrays = [array1]
+  res.json(array1);
 
-    let result = arrays.filter(arr => arr.some(obj => obj.userId === userIdToFind));
+  // const arrays = [array1]
 
-    const dataArray = 
-
-}
- */
+  // let result = arrays.filter(arr => arr.some(obj => obj.userId === userIdToFind))
+};
