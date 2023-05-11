@@ -130,6 +130,8 @@ async function fetchSneakersSales(db) {
 
 exports.getHistoryById = function (req, res) {
   const shoeId = req.params.id;
+
+  // New balance 2002R
   const array1 = {
     idSize: "4d9f6441-f20c-4906-89e1-b0c4f48fe92f",
     "7 mars": "151",
@@ -144,9 +146,48 @@ exports.getHistoryById = function (req, res) {
     "9 mai": "181",
   };
 
-  res.json(array1);
+  //Jordan 1 retro High OG
+  const array2 = {
+    idSize: "d0368968-12bf-4b20-9f69-fb7e0408b9b4",
+    "Aout 22": "205",
+    "Sept 22": "187",
+    "Oct 22": "195",
+    "Nov 22": "225",
+    "Dec 22": "240",
+    "Jan 23": "232",
+    "Fev 23": "230",
+    "Mars 23": "256",
+    "Avr 23": "248",
+    "Mai 23": "260",
+  };
 
-  // const arrays = [array1]
+  // Jordan 4 Retro
+  const array3 = {
+    idSize: "59410744-c86e-4ba3-8565-9c3cdad2c253",
+    "Mai 21": "313",
+    "Aout 21": "360",
+    "Dec 21": "431",
+    "Avr 22": "438",
+    "Aout 22": "435",
+    "Oct 22": "412",
+    "Dec 22": "420",
+    "Jan 23": "476",
+    "Mars 23": "477",
+    "Mai 23": "462",
+  };
 
-  // let result = arrays.filter(arr => arr.some(obj => obj.userId === userIdToFind))
+  // Nike SB Dunk Low
+  const array4 = {
+    idSize: "01eb7378-06db-4b61-b39e-b44c24efb2c1",
+    "20 avril": "504",
+    "27 avril": "413",
+    "3 mai": "335",
+    "10 mai": "411",
+  };
+
+  const arrays = [array1, array2, array3, array4];
+
+  let result = arrays.find((arr) => arr.idSize === shoeId) || null;
+
+  res.json(result);
 };
